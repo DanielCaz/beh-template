@@ -2,14 +2,17 @@
   "name": "beh-template",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.tsx",
+    "build": "bun build --target=bun ./src/index.tsx --outfile=build/index.js",
+    "start": "bun run build/index.js"
   },
   "dependencies": {
+    "@elysiajs/html": "^0.7.3",
+    "@elysiajs/static": "^0.7.1",
     "elysia": "latest"
   },
   "devDependencies": {
     "bun-types": "latest"
   },
-  "module": "src/index.js"
+  "module": "src/index.tsx"
 }
