@@ -6,6 +6,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BEH App</title>
         <script src="/public/htmx.min.js"></script>
+        <link rel="stylesheet" href="/public/tailwind.css" />
       </head>
       <body>{children}</body>
     </html>

@@ -10,8 +10,8 @@ new Elysia()
   .use(html()) // Apply html plugin after /api so that /api responses are not rendered as html
   .get("/", () => (
     <Layout>
-      <main>
-        <h1>BEH App</h1>
+      <main class="p-6">
+        <h1 class="font-semibold text-2xl mb-2">BEH App</h1>
         <p hx-get="/api/hello" hx-swap="outerHTML" hx-trigger="load"></p>
       </main>
     </Layout>

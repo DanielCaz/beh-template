@@ -3,8 +3,10 @@
   "version": "1.0.50",
   "scripts": {
     "dev": "bun run --watch src/index.tsx",
-    "build": "bun build --target=bun ./src/index.tsx --outfile=build/index.js",
-    "start": "bun run build/index.js"
+    "build": "bun build --target=bun ./src/index.tsx --outfile=build/index.js && bun run tw-build",
+    "start": "bun run build/index.js",
+    "tw": "bun run tw-build -- --watch",
+    "tw-build": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css"
   },
   "dependencies": {
     "@elysiajs/html": "^0.7.3",
@@ -12,7 +14,8 @@
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "tailwindcss": "^3.3.3"
   },
   "module": "src/index.tsx"
 }
